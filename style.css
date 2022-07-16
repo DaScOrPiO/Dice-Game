@@ -6,10 +6,12 @@
     max-height: 100vh;
     font-size: 1em;
 }
-body{
+
+body {
     background-color: var(--main-dark-color);
     color: var(--very-dark-color);
 }
+
 .container {
     width: 80vw;
     height: 80vh;
@@ -20,7 +22,8 @@ body{
     border-radius: 5rem;
     box-shadow: 6px 2px 4px 2px var(--light-color), -6px -2px 4px 2px var(--very-dark-color-2);
 }
-.section1,.section2 {
+
+.section1, .section2 {
     height: 40vh;
     width: 80vw;
     display: flex;
@@ -29,21 +32,24 @@ body{
     position: relative;
     align-self: center;
 }
+
 .section2 {
     background-color: transparent;
 }
+
 .new-game {
     width: 15%;
     height: 18%;
     position: absolute;
     transform: translate(50%, 50%);
     left: 33%;
-    top:  5%;
+    top: 5%;
     font-size: 1.2rem;
     cursor: pointer;
     background-color: var(--light-color);
 }
-#player-1{
+
+#player-0 {
     width: 10%;
     height: 40%;
     background-color: transparent;
@@ -57,7 +63,7 @@ body{
     color: var(--very-dark-color-2);
 }
 
-#player-2{
+#player-1 {
     width: 10%;
     height: 40%;
     background-color: transparent;
@@ -70,6 +76,7 @@ body{
     font-size: 2rem;
     color: var(--very-dark-color-2);
 }
+
 .img {
     width: 5%;
     height: 20%;
@@ -77,11 +84,13 @@ body{
     top: 35%;
     left: 45%;
 }
- .img > img{
+
+.img>img {
     max-width: 100%;
     height: 100%;
- }
- .current1{
+}
+
+.current-0 {
     width: 10%;
     height: 40%;
     background-color: var(--light-color);
@@ -94,7 +103,8 @@ body{
     font-size: 2rem;
     border-radius: 20px;
 }
-.current2{
+
+.current-1 {
     width: 10%;
     height: 40%;
     background-color: var(--light-color);
@@ -106,14 +116,15 @@ body{
     align-items: center;
     font-size: 2rem;
     border-radius: 20px;
- }
- .roll {
+}
+
+.roll {
     width: 15%;
     height: 10%;
     position: absolute;
     transform: translate(50%, 50%);
     left: 33%;
-    top:  25%;
+    top: 25%;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -121,21 +132,22 @@ body{
     font-size: 1.2rem;
     color: var(--very-dark-color-2);
     cursor: pointer;
- }
- .hold{
+}
+
+.hold {
     width: 10%;
     height: 10%;
     position: absolute;
     transform: translate(50%, 50%);
     left: 40.5%;
-    top:  38%;
+    top: 38%;
     background-color: var(--very-dark-color-2);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
     cursor: pointer;
- }
+}
 
 .player-turn {
     background-color: white;
@@ -152,7 +164,62 @@ body{
     display: none;
 }
 
-.new-game:hover, .roll:hover, .hold:hover{
+.new-game:hover, .roll:hover, .hold:hover {
     opacity: 0.8;
 }
- 
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        margin-top: 0;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .new-game {
+        width: 30%;
+        height: 18%;
+        left: 25%;
+    }
+
+    .img {
+        width: 15%;
+        height: 20%;
+    }
+
+    .player-turn {
+        width: 40%;
+        height: 20%;
+    }
+
+    .current-0, .current-1 {
+        width:40%;
+        height: 40%;
+        position: absolute;
+        top: 45%;
+    }
+
+    .current-1 {
+        position: absolute;
+        right: 2%;
+    }
+    .section1, .section2 {
+        width: 100%;
+        height: 50%;
+    }
+    .roll {
+        width: 25%;
+        height: 10%;
+        top: 2%;
+        left: 25%;
+    }
+    .hold {
+        width: 20%;
+        height: 10%;
+        top: 15%;
+        left: 30%;
+    }
+}
