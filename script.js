@@ -1,3 +1,4 @@
+alert('Players! Ensure to hold points as scores reset when you roll a 1');
 //Selecting Elements
 let container = document.querySelector('.container');
 const reset = document.querySelector('.new-game');
