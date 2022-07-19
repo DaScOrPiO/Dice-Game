@@ -1,4 +1,4 @@
-alert('Players! Ensure to hold points as scores reset when you roll a 1');
+alert('Players! Ensure to hold points as scores reset when you roll a 1 First player to reach 100 wins!');
 //Selecting Elements
 let container = document.querySelector('.container');
 const reset = document.querySelector('.new-game');
